@@ -9,7 +9,7 @@
 # max_heapify是维护堆的性质，即根结点的值大于左右子节点的值
 
 
-
+# 维护最大堆性质
 def max_heapify(arr, index, heap_size):
     left = 2 * index + 1
     right = 2 * index + 2
@@ -43,6 +43,7 @@ def heap_sort(arr):
 
 def topK(arr, k):
     build_heap(arr)
+    # 因为是找第k大的数，并且构建最大堆的时候已经找到第一大的数了，所以只执之行k-1次，
     for i in range(1,k):
         arr[0], arr[len(arr) - i] = arr[len(arr) - i], arr[0]
         max_heapify(arr, 0, len(arr) - i)
