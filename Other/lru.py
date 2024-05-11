@@ -1,6 +1,6 @@
 # Problem: LRU Cache
 # 一个哈希表配合一个双向链表实现LRU Cache
-from re import A
+
 
 
 class LRUCache:
